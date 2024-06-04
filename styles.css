@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+
+div {
+  background-color: #45cdff;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.te {
+  opacity: 0.5;
+}
+
+img {
+  height: 25%;
+  width: auto;
+  pointer-events: none;
+}
+
+.hide {
+  opacity: 0.1;
+}
+
+.hid {
+  opacity: 0.1;
+}
+
+                                            /* кнопки */
+
+.control {
+  padding: 100 0 0 100;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #d1d1d1;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.buttons {
+  margin: 20px 0;
+}
