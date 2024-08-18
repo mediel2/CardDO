@@ -6,33 +6,39 @@ div {
   background-color: #45cdff;
 }
 
+img {
+  height: 25%;
+  width: auto;
+}
+
 .main {
   display: flex;
   height: 100%;
 }
 
-.te {
-  opacity: 0.5;
+                                            /* поле с картами */
+
+.card_field {
+  display: flex;
 }
 
-img {
-  height: 25%;
-  width: auto;
-  pointer-events: none;
+.column {
+  background-color: blue;
 }
 
-.hide {
-  opacity: 0.1;
+.card:hover {
+  opacity: 0.8;
 }
 
-.hid {
-  opacity: 0.1;
+.card {
+  cursor: pointer;
 }
 
                                             /* кнопки */
 
 .control {
-  padding: 100 0 0 100;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
 .btn {
@@ -48,4 +54,19 @@ img {
 
 .buttons {
   margin: 20px 0;
+}
+
+                                            /* вспомогательные классы */
+
+.active {
+  opacity: 0.4;
+}
+
+.active:hover {
+  opacity: 0.6;
+}
+
+.hide {
+  opacity: 0.2;
+  pointer-events: none;
 }

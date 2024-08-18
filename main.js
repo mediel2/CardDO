@@ -1,43 +1,35 @@
-const cards = document.querySelectorAll("#card");
+const cards = document.querySelectorAll(".card");
+const button_reset = document.querySelector(".reset_all");
+const button_pass = document.querySelector(".pass");
+const button_cancel = document.querySelector(".reset_last");
 
-const reset_all = document.querySelector(".reset_all");
-const pass = document.querySelector(".pass");
-const reset_last = document.querySelector(".reset_last");
-const main = document.querySelector(".main");
+button_reset.addEventListener('click', resetAll);
+button_pass.addEventListener('click', pass);
+button_cancel.addEventListener('click', cancel);
 
-cards.forEach(function (item) {
-    item.addEventListener('click', function mark(event) {
-        event.preventDefault();
-        item.classList.toggle('hide');
+cards.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
     })
 });
 
-reset_all.addEventListener('click', r_all);
-
-function r_all(event) {
-    event.preventDefault();
-    cards.forEach(function (item) {
-        item.classList.remove('hide', 'hid')
+function resetAll() {
+    cards.forEach(item => {
+        item.classList.remove('active', 'hide');
     })
 }
 
-pass.addEventListener('click', pss);
-
-function pss(event) {
-    const pass_cards = document.querySelectorAll(".hide")
-    event.preventDefault();
-    pass_cards.forEach(function (item) {
-        item.classList.add('hid')
-        item.classList.remove('hide')        
+function pass() {
+    const pass_cards = document.querySelectorAll(".active")
+    pass_cards.forEach(item => {
+        item.classList.add('hide');
+        item.classList.remove('active');
     })
 }
 
-reset_last.addEventListener('click', cancel);
-
-function cancel(event) {
-    const pass_cards = document.querySelectorAll(".hide")
-    event.preventDefault();
-    pass_cards.forEach(function (item) {
-        item.classList.remove('hide');
+function cancel() {
+    const pass_cards = document.querySelectorAll(".active")
+    pass_cards.forEach(item => {
+        item.classList.remove('active');
     })
 }
